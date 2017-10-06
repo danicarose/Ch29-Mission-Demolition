@@ -2,7 +2,9 @@
 using UnityEngine;
 
 public class Slingshot : MonoBehaviour {
-	//fields set in the Unity Inpspector pane
+    static public Slingshot S;
+
+    //fields set in the Unity Inpspector pane
 	public GameObject	prefabProjectile;
 	public float 		velocityMult = 4f;
 	public bool 		_____________________________;
@@ -49,7 +51,10 @@ public class Slingshot : MonoBehaviour {
 	}
 
 	void Awake(){
-		Transform launchPointTrans = transform.Find ("LaunchPoint");
+        //Set the Slingshot singleton S
+        S = this;
+
+        Transform launchPointTrans = transform.Find ("LaunchPoint");
 		launchPoint = launchPointTrans.gameObject;
 		launchPoint.SetActive (false);
 		launchPos = launchPointTrans.position;
