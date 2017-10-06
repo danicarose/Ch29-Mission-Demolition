@@ -28,7 +28,7 @@ public class Slingshot : MonoBehaviour {
 		Vector3 mouseDelta = mousePos3D-launchPos;
 
 		//Limit mouseDelta to the radius of the Slingshot SphereCollider
-		float maxMagnitude = this.GetComponent<SphereCollider>().radius; //THIS IS AN ERROR BUT WHY
+		float maxMagnitude = this.GetComponent<SphereCollider>().radius; 
 		if (mouseDelta.magnitude > maxMagnitude) {
 			mouseDelta.Normalize ();
 			mouseDelta *= maxMagnitude;
@@ -43,6 +43,7 @@ public class Slingshot : MonoBehaviour {
 			aimingMode = false;
 			projectile.GetComponent<Rigidbody>().isKinematic = false;
 			projectile.GetComponent<Rigidbody>().velocity = -mouseDelta * velocityMult;
+			FollowCam.S.poi = projectile;
 			projectile = null;
 		}
 	}
