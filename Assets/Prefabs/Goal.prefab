@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6599300}
   - component: {fileID: 2399300}
   - component: {fileID: 11418288}
+  - component: {fileID: 114400746390100782}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -105,3 +106,14 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 199300}
   m_IsPrefabParent: 1
+--- !u!114 &114400746390100782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60d23d5134f6994b95d714f08886c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

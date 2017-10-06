@@ -50,7 +50,7 @@ public class FollowCam : MonoBehaviour {
 		destination.y = Mathf.Max(minxXY.y, destination.y); //ALSO CHANGED 
 
 		//Interpolate from the current Camera position toward destination
-		destination = Vector3.Lerp(transform.position, destination, easing);
+		destination = Vector3.Lerp(transform.position, destination, easing); //NOTE: A Lerp is a linear interpolation
 
 		// Retain a destination.z of camZ
 		destination.z = camZ;
