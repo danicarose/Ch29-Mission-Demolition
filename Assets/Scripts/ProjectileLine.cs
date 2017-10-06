@@ -102,7 +102,7 @@ public class ProjectileLine : MonoBehaviour {
             if (points == null)
             {
                 //If there are no points, returns Vector3.zero
-                return (points[points.Count - 1];
+                return (points[points.Count - 1]);
             }
             return (points[points.Count - 1]);
         }
@@ -131,7 +131,7 @@ public class ProjectileLine : MonoBehaviour {
         }
         //If there is a poi, it's loc is added every FixedUpdate
         AddPoint();
-        if (poi.rigidbody.IsSleeping())
+        if (poi.GetComponent<Rigidbody>().IsSleeping())
         {
             //Once the poi is sleeping,it is cleared
             poi = null;
