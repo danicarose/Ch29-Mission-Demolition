@@ -12,6 +12,7 @@ public class Goal : MonoBehaviour {
         if(other.gameObject.tag == "Projectile")
         {
             //If so, set goalMet to tru
+
             Goal.goalMet = true;
             //Also set the alpha of the color to higher opacity
             Color c = GetComponent<Renderer>().material.color;
