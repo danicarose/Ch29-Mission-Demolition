@@ -3,15 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Slingshot : MonoBehaviour {
-<<<<<<< HEAD
-=======
-    static public Slingshot S;
-
-    //fields set in the Unity Inpspector pane
-	public GameObject	prefabProjectile;
-	public float 		velocityMult = 4f;
-	public bool 		_____________________________;
->>>>>>> db32a70c998e0cacac092876bd91db774cc592b2
 
     static public Slingshot S;
 
@@ -24,16 +15,9 @@ public class Slingshot : MonoBehaviour {
     public Rigidbody rb;
 
 	void Awake(){
-<<<<<<< HEAD
         S = this;
 
 		Transform launchPointTrans = transform.Find ("LaunchPoint");
-=======
-        //Set the Slingshot singleton S
-        S = this;
-
-        Transform launchPointTrans = transform.Find ("LaunchPoint");
->>>>>>> db32a70c998e0cacac092876bd91db774cc592b2
 		launchPoint = launchPointTrans.gameObject;
 		launchPoint.SetActive(false);
         launchPos = launchPointTrans.position;
